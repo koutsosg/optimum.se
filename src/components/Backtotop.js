@@ -14,7 +14,7 @@ const icon = {
 };
 
 const icon2 = {
-  name: "react",
+  name: "",
   loading: true,
   link: true,
   circular: true,
