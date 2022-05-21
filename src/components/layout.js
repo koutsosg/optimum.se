@@ -4,6 +4,7 @@ import Header from "../components/header"
 import MessengerCustomerChat from "react-messenger-customer-chat"
 import BackToTop from "../components/Backtotop"
 import 'semantic-ui-css/semantic.min.css'
+import '../style.css'
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
