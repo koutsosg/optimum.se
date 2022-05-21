@@ -1,7 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `optimumab.se`,
-    siteUrl: `https://optimumab.se`
+    title: `Optimum städ AB`,
+    description: `Fast, efficient, and honest, Optimum städ has become a reputable and well-known service provider.`,
+    siteUrl: `https://optimumab.se`,
+    image: "/logo.png",
+    social: {
+      twitter: ``,
+    },
   },
   plugins: [/* {
     resolve: 'gatsby-plugin-google-analytics',
@@ -37,10 +42,18 @@ module.exports = {
       }, */
     },
   }, "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
-    resolve: 'gatsby-plugin-manifest',
-    options: {
-      "icon": "src/images/icon.png"
-    }
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Optimum Stad AB`,
+        short_name: `Optimum AB`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        // This will impact how browsers show your PWA/website
+        // https://css-tricks.com/meta-theme-color-and-trickery/
+        theme_color: `#8a8a8a`,
+        display: `minimal-ui`,
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+      },
   }, "gatsby-plugin-mdx", "gatsby-transformer-remark", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
     options: {
@@ -48,6 +61,12 @@ module.exports = {
       "path": "./src/images/"
     },
     __key: "images"
+  },{
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `images`,
+      path: `${__dirname}/src/images`,
+    },
   }, {
     resolve: 'gatsby-source-filesystem',
     options: {

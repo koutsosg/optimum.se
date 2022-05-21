@@ -1,10 +1,13 @@
 import * as React from "react"
 import Layout from "../components/layout"
+import Seo from "../components/seo"
+import { graphql } from "gatsby"
+const IndexPage = ({data}) => {
 
-const IndexPage = () => {
+  const siteUrl = `${data.site.siteMetadata?.siteUrl}`
   return (
-    <Layout>
-    
+    <Layout >
+    <Seo title="Home" siteUrl={siteUrl} />
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
 molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
 numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
@@ -72,3 +75,17 @@ quasi aliquam eligendi, placeat qui corporis!</p>
 }
 
 export default IndexPage
+export const pageQuery = graphql`
+  query {
+    sitePage {
+      path
+    }
+
+    site {
+      siteMetadata {
+        title
+        siteUrl
+      }
+    }
+  }
+`
