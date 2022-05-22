@@ -2,15 +2,90 @@
     /* display: flex; */
     /* justify-content: space-between; */
     /* align-items: center; */
-    padding: 2.9rem 2.175rem;
+    padding: 2.5rem 2.175rem ;
     background: black;
   }                 
   
   .main-header a {
     color: white;
-  
-  
   }
+  .cover{
+    max-height: 28vw;
+  }
+ .welcome-section {
+    background-color: #9a998e;
+    text-align: center;
+    padding: 0 0 0 0;
+  
+}
+
+.wel-div{
+  padding: 7vw 0 8vw 0;
+  
+}
+.wel-header{
+  color: #000000;
+  font-size: 4vw;
+
+  
+}
+.wel-paragraph{
+  color: #000000;
+  font-size: 2vw;
+ 
+  
+}
+
+.well-button{
+  color: black;
+  cursor: pointer;
+  border-radius: 20vh;
+  border-style: solid;
+  background-color: #9a998e;
+  border-color: #000000;
+  border-width: 1px;
+  padding: 1vh;
+  font-size: 1.5vw;
+ 
+}
+.well-button:hover {
+  background-color: #000000;
+  color: #9a998e;
+  transition: all 0.3s ease-in;
+}
+@media screen and (max-width: 768px) {
+  .cover{
+    min-height: 23vh;
+  }
+  .welcome-section{
+    position: relative;
+    text-align: center;
+    padding: 0;
+  }
+  .wel-div{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-15%, -15%);
+    padding: 0;
+  }
+  .wel-header{
+    font-size: 5vw;
+   
+  }
+  .wel-paragraph{
+    font-size: 4vw;
+   
+  }
+  .well-button{
+    font-size: 2.5vw;
+    padding: 1vh;
+    
+  }
+}
+
+
+
   /* 
   .languages {
     list-style: none;

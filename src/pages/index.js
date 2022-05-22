@@ -3,14 +3,15 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { graphql } from "gatsby"
 
+import Welcome from "../components/welcome"
 const IndexPage = ({data}) => {
 
   const siteUrl = `${data.site.siteMetadata?.siteUrl}`
   return (
     <Layout>
     <Seo title="Home" siteUrl={siteUrl} />
-    
-
+   
+<Welcome />
     </Layout>
  
   )
