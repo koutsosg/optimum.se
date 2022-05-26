@@ -53,9 +53,19 @@
   color: #9a998e;
   transition: all 0.3s ease-in;
 }
+.about-section{
+  background-color: #505554;
+  color: white;
+}
+.about-img{
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+ 
+}
 @media screen and (max-width: 768px) {
   .cover{
-    min-height: 23vh;
+    min-height: 30vh;
   }
   .welcome-section{
     position: relative;
@@ -81,6 +91,9 @@
     font-size: 2.5vw;
     padding: 1vh;
     
+  }
+  .about-img{
+    display: none;
   }
 }
 

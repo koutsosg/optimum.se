@@ -1,23 +1,25 @@
-import * as React from "react"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import { graphql } from "gatsby"
+import * as React from "react";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
+import { graphql } from "gatsby";
+import About from "../components/about";
 
-import Welcome from "../components/welcome"
-const IndexPage = ({data}) => {
+import Welcome from "../components/welcome";
 
-  const siteUrl = `${data.site.siteMetadata?.siteUrl}`
+const IndexPage = ({ data }) => {
+  const siteUrl = `${data.site.siteMetadata?.siteUrl}`;
   return (
     <Layout>
-    <Seo title="Home" siteUrl={siteUrl} />
-   
-<Welcome />
-    </Layout>
- 
-  )
-}
+      <Seo title="Home" siteUrl={siteUrl} />
 
-export default IndexPage
+      <Welcome />
+      <About />
+     
+    </Layout>
+  );
+};
+
+export default IndexPage;
 export const pageQuery = graphql`
   query {
     sitePage {
@@ -31,4 +33,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

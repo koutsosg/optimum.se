@@ -1,16 +1,16 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image";
 
-export function Cover() {
+export function AboutImg() {
   return (
     <StaticImage 
     
-      src="../images/welcome.webp"
+      src="../images/about.webp"
       alt="Välkommen till Optimum städ AB"
       placeholder="blurred"
-      imgClassName="cover"
-      width={1920}
-      height={450}
+      className="about-img"
+      layout= "fullWidth"
+     
     />
   );
 }

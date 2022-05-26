@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Link } from "gatsby";
-
+import { Button } from 'semantic-ui-react'
 const Header = ({ siteTitle }) => {
 
   return (
@@ -16,6 +16,7 @@ const Header = ({ siteTitle }) => {
             {siteTitle}
           </Link>
         </h1>
+       
       </div>
      {/*  <ul className="languages">
         {languages.map((lng) => (
